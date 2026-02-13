@@ -6,7 +6,7 @@
 /*   By: fraalexa <fraalexa@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 08:59:00 by fraalexa          #+#    #+#             */
-/*   Updated: 2026/02/12 06:08:16 by fraalexa         ###   ########.fr       */
+/*   Updated: 2026/02/13 10:22:33 by fraalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,6 @@ void	ft_usleep(long ms);
 void	eat(t_philo_data *data);
 int		f_atoi(char *str);
 void	free_structs(t_sim *sim);
+int		ft_strcmp(char *s1, char *s2);
+int		check_args(char **av);
 #endif

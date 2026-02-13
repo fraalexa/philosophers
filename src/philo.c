@@ -6,7 +6,7 @@
 /*   By: fraalexa <fraalexa@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 07:44:29 by fraalexa          #+#    #+#             */
-/*   Updated: 2026/02/13 00:12:26 by fraalexa         ###   ########.fr       */
+/*   Updated: 2026/02/13 10:26:07 by fraalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ void	*sim(void *arg)
 	{
 		print_output(data->sim, " has taken a fork ", data->id);
 		ft_usleep(data->die_t);
-		print_output(data->sim, " died ", data->id);
 		return (NULL);
 	}
 	while (1)
@@ -109,9 +108,9 @@ int	main(int ac, char **av)
 	pthread_t	monitor;
 
 	i = 0;
-	if (ac < 5 || ac > 6)
+	if (ac < 5 || ac > 6 || !check_args(av))
 	{
-		printf("input layout: %s n_philo die _t eat_t sleep_t n_eat\n", av[0]);
+		printf("input error: %s n_philo die _t eat_t sleep_t n_eat\n", av[0]);
 		return (1);
 	}
 	n_philo = f_atoi(av[1]);
